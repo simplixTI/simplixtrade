@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>simplix · Relatórios de Análise Cambial</title>
+<style>
+:root {
+  --bg: #101820;
+  --panel: #1a2530;
+  --panel-hover: #22303d;
+  --ink: #eef2f5;
+  --muted: #93a1ad;
+  --accent: #4da3ff;
+  --hold: #d9a441;
+  --under: #ef6f63;
+  --over: #34c98e;
+  --rule: #2a3a47;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+.page { max-width: 60rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+header { text-align: center; margin-bottom: 3rem; }
+header img { height: 2.6rem; width: auto; filter: invert(0.88) hue-rotate(180deg); }
+header p { color: var(--muted); margin-top: 0.8rem; font-size: 1.05rem; }
+
+.grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+.card {
+  display: block; text-decoration: none; color: inherit;
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 14px;
+  padding: 1.6rem 1.5rem; transition: background .15s ease, transform .15s ease;
+}
+.card:hover { background: var(--panel-hover); transform: translateY(-2px); }
+.card .pair { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.01em; }
+.card .desc { color: var(--muted); font-size: 0.9rem; margin: 0.15rem 0 1rem; }
+.badge {
+  display: inline-block; padding: 0.2rem 0.7rem; border-radius: 999px;
+  font-size: 0.8rem; font-weight: 600; border: 1px solid currentColor;
+}
+.badge.hold { color: var(--hold); }
+.badge.underweight { color: var(--under); }
+.badge.overweight { color: var(--over); }
+.card .meta { color: var(--muted); font-size: 0.8rem; margin-top: 1rem; }
+.card .open { color: var(--accent); font-size: 0.9rem; margin-top: 0.6rem; font-weight: 600; }
+
+footer {
+  margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+  color: var(--muted); font-size: 0.82rem; text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <img src="assets/simplix.png" alt="simplix">
+    <p>Relatórios de análise cambial · Preparado para Rodrigo</p>
+  </header>
+
+  <div class="grid">
+    <a class="card" href="reports/usdbrl.html">
+      <div class="pair">USD/BRL</div>
+      <div class="desc">Dólar americano / Real</div>
+      <span class="badge hold">Hold</span>
+      <div class="meta">Análise de 13/10/2026</div>
+      <div class="open">Abrir relatório →</div>
+    </a>
+
+    <a class="card" href="reports/eurusd.html">
+      <div class="pair">EUR/USD</div>
+      <div class="desc">Euro / Dólar americano</div>
+      <span class="badge underweight">Underweight</span>
+      <div class="meta">Análise de 13/10/2026</div>
+      <div class="open">Abrir relatório →</div>
+    </a>
+
+    <a class="card" href="reports/eurbrl.html">
+      <div class="pair">EUR/BRL</div>
+      <div class="desc">Euro / Real</div>
+      <span class="badge hold">Hold</span>
+      <div class="meta">Análise de 13/10/2026</div>
+      <div class="open">Abrir relatório →</div>
+    </a>
+  </div>
+
+  <footer>
+    Análises geradas por agentes de IA com fins exclusivamente informativos.
+    Não constituem recomendação de investimento.
+  </footer>
+</div>
+</body>
+</html>
